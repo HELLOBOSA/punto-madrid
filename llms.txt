@@ -1,8 +1,10 @@
 # Punto Reforma
 
-> Custom carpentry, bathrooms, kitchens, painting and full renovations in Madrid. Spanish and English-speaking team.
+> Architecture and total renovations in Madrid — for homes, apartments and commercial spaces. Custom carpentry, prime kitchens and bathrooms, project management and permits, from first idea to handover. One responsible contact throughout.
 
-> Puntoreforma: reformas, carpintería a medida, baños, cocinas, pintura y coordinación de obra en Madrid. Solicita presupuesto sin compromiso.
+> Arquitectura de interiores y reformas integrales en Madrid — para viviendas, pisos y locales comerciales. Carpintería a medida, cocinas y baños prime, coordinación de obra y gestión de permisos, desde la primera idea hasta la entrega. Un solo interlocutor responsable durante todo el proceso.
+
+Brand: Punto Reforma (one-word wordmark: Puntoreforma). This site is Punto Reforma Madrid, the main site.
 
 ## Contact
 
@@ -10,6 +12,16 @@
 - Email: info@puntoreforma.es
 - Phone: +34 910 726 73
 - Location: Madrid, Spain
+
+## Services
+
+- Reforma integral & coordinación de obra — complete renovations for homes, apartments and commercial spaces, from concept to handover
+- Arquitectura de interiores & diseño — interior architecture, layout planning, material direction and design decisions
+- Cocinas & baños prime — kitchens and bathrooms designed as central parts of the renovation
+- Carpintería a medida — bespoke wardrobes, storage, built-ins and furniture
+- Pintura & acabados — painting, decorative finishes and surface preparation
+- Reformas de baño — complete bathroom renovations including waterproofing and trade coordination
+- Reformas de cocina — kitchen renovations including utilities, layout and custom cabinetry
 
 ## Pages
 
@@ -24,8 +36,8 @@
 - [Pintura en Madrid: color y acabados](https://puntoreforma.es/blog/pintura-madrid-color-acabados/): How to plan painting work in Madrid: surface preparation, colour choices, finishes, timelines and common mistakes to avoid.
 - [Reforma de baño en comunidad Madrid](https://puntoreforma.es/blog/reforma-bano-comunidad-madrid/): What to check with your building community before renovating a bathroom in Madrid: utilities, permits and documentation.
 - [Reforma de baño en Madrid: checklist](https://puntoreforma.es/blog/reforma-bano-madrid-checklist/): Practical checklist for renovating a bathroom in Madrid: budget, permits, community rules, materials, timelines and trade coordination.
-- [Reformas de baño](https://puntoreforma.es/blog/reforma-bano-madrid-precio/): Price ranges for bathroom renovation in Madrid: what raises costs, permits, community fees, VAT and tax deductions in Spain.
+- [Reformas de baño en Madrid: precios](https://puntoreforma.es/blog/reforma-bano-madrid-precio/): Price ranges for bathroom renovation in Madrid: what raises costs, permits, community fees, VAT and tax deductions in Spain.
 - [Reforma de cocina en Madrid: planificación](https://puntoreforma.es/blog/reforma-cocina-madrid-planificacion/): How to plan a kitchen renovation in Madrid: layout, utilities, materials, timelines and realistic budgets. Expert guide.
-- [Reformas de cocina](https://puntoreforma.es/blog/reforma-cocina-madrid-precio/): Kitchen renovation prices in Madrid: facelift vs full remodel, custom carpentry, utilities, VAT and how to budget realistically.
+- [Reformas de cocina en Madrid: precios](https://puntoreforma.es/blog/reforma-cocina-madrid-precio/): Kitchen renovation prices in Madrid: facelift vs full remodel, custom carpentry, utilities, VAT and how to budget realistically.
 - [Reforma integral en Madrid: precio y proceso](https://puntoreforma.es/blog/reforma-integral-madrid-precio/): What a full renovation in Madrid includes: price by scope, phases, permits and complete project coordination.
 - [Reforma de piso en Madrid: coste y plazos](https://puntoreforma.es/blog/reforma-piso-madrid/): Guide to renovating a flat in Madrid: budget, phases, building community, permits, technical documentation and coordination.
