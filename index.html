@@ -314,7 +314,7 @@ html.js body:not(.ready) .hero-r .hero-img { clip-path: inset(0 0 100% 0); }
 .ph .ph-label::before { content: "⟢  "; color: var(--accent); }
 
 /* ---------- marquee ---------- */
-.marquee { border-block: 1px solid var(--line); padding: 22px 0; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee { border-block: 1px solid var(--line); padding: 22px 0; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(90deg, transparent, #000 80px, #000 calc(100% - 80px), transparent); mask-image: linear-gradient(90deg, transparent, #000 80px, #000 calc(100% - 80px), transparent); }
 .marquee-track { display: inline-flex; gap: 0; will-change: transform; animation: marq 36s linear infinite; }
 body.no-motion .marquee-track { animation: none; }
 .marquee-track .grp { display: inline-flex; align-items: center; }
@@ -1005,9 +1005,9 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
       <div>
         <h4 data-en="Network">Red</h4>
         <ul>
-          <li><a href="/ciudades/" data-en="Locations">Ubicaciones</a></li>
-          <li><a href="/partners/" data-en="Collaborators">Colaboradores</a></li>
-          <li><a href="/legal/" data-en="Legal notice">Aviso legal</a></li>
+          <li><a href="ciudades/" data-en="Locations">Ubicaciones</a></li>
+          <li><a href="partners/" data-en="Collaborators">Colaboradores</a></li>
+          <li><a href="legal/" data-en="Legal notice">Aviso legal</a></li>
         </ul>
       </div>
     </div>
