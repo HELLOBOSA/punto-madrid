@@ -31,11 +31,13 @@
   "image": "https://puntoreforma.es/images/projekt/villa-boa-after2-BATHROOM.webp",
   "author": {
     "@type": "Organization",
-    "name": "Punto Reforma Madrid"
+    "name": "Punto Reforma Madrid",
+    "alternateName": "Puntoreforma"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Punto Reforma Madrid",
+    "alternateName": "Puntoreforma",
     "logo": {
       "@type": "ImageObject",
       "url": "https://puntoreforma.es/apple-touch-icon.png"
@@ -545,6 +547,23 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Consent Mode v2. Denied until the banner says otherwise, then updated in place.
+  (function(){
+    var granted = false;
+    try {
+      var raw = localStorage.getItem('puntoreforma_cookie_consent_v1');
+      if (raw) { var v = JSON.parse(raw); granted = v && v.choice === 'accept'; }
+    } catch (e) {}
+    gtag('consent', 'default', {
+      ad_storage: granted ? 'granted' : 'denied',
+      ad_user_data: granted ? 'granted' : 'denied',
+      ad_personalization: granted ? 'granted' : 'denied',
+      analytics_storage: granted ? 'granted' : 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+  })();
   gtag('js', new Date());
   gtag('config', 'G-VEM56KDVN3');
 </script>
@@ -679,7 +698,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
     </header>
     <div class="article-body wrap">
       <h2 data-en="Price ranges by type of work">Rangos de precio según el alcance</h2>
-      <p data-en="A light refresh — keeping the existing plumbing layout, replacing sanitary fixtures, retiling over old tiles — typically runs between 3,500 and 6,000 euros for a standard Madrid bathroom of 4 to 6 square metres. A complete renovation that replaces everything including waterproofing, all tiles, plumbing, and electrics falls between 7,000 and 14,000 euros depending on materials. High-end projects with custom fittings, heated floors, or premium tile can go beyond that.">Una reforma de refresco, manteniendo la distribución existente, cambiando los sanitarios y alicatando sobre el azulejo viejo, suele salir entre 3.500 y 6.000 euros para un baño estándar de Madrid de 4 a 6 metros cuadrados. Una reforma completa que cambia todo incluyendo impermeabilización, alicatado completo, fontanería y electricidad está entre 7.000 y 14.000 euros según los materiales. Los proyectos de gama alta con acabados a medida, suelo radiante o azulejo premium pueden superar esas cifras.</p>
+      <p data-en="A light refresh (keeping the existing plumbing layout, replacing sanitary fixtures, retiling over old tiles) typically runs between 3,500 and 6,000 euros for a standard Madrid bathroom of 4 to 6 square metres. A complete renovation that replaces everything including waterproofing, all tiles, plumbing, and electrics falls between 7,000 and 14,000 euros depending on materials. High-end projects with custom fittings, heated floors, or premium tile can go beyond that.">Una reforma de refresco, manteniendo la distribución existente, cambiando los sanitarios y alicatando sobre el azulejo viejo, suele salir entre 3.500 y 6.000 euros para un baño estándar de Madrid de 4 a 6 metros cuadrados. Una reforma completa que cambia todo incluyendo impermeabilización, alicatado completo, fontanería y electricidad está entre 7.000 y 14.000 euros según los materiales. Los proyectos de gama alta con acabados a medida, suelo radiante o azulejo premium pueden superar esas cifras.</p>
       <p data-en="These are 2026 Madrid prices including labour, materials, and waste removal, with IVA (21%) on top. They assume the bathroom is accessible and the building's main drain is in good condition.">Estos son precios de Madrid en 2026, incluyendo mano de obra, materiales y gestión de residuos, con IVA (21%) aparte. Parten del supuesto de que el baño es accesible y que la bajante del edificio está en buen estado.</p>
 
       <h2 data-en="What a standard quote includes and what it does not">Qué incluye (y qué no) un presupuesto estándar</h2>
@@ -695,7 +714,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
 
       <h2 data-en="How to compare quotes without comparing apples with oranges">Cómo comparar presupuestos sin equivocarse</h2>
       <p data-en="The only way to compare two quotes fairly is to make sure they cover the same scope. Ask each contractor to specify: whether waterproofing is included, which fixtures and taps are included (brand and model), whether waste removal is included, and what the IVA situation is. A quote that looks 20% cheaper than another often has a scope that is 30% smaller.">La única forma de comparar dos presupuestos de forma justa es asegurarse de que cubren el mismo alcance. Pide a cada instalador que especifique: si la impermeabilización está incluida, qué sanitarios y grifería están incluidos (marca y modelo), si la gestión de residuos está incluida y cómo está la situación del IVA. Un presupuesto que parece un 20% más barato que otro a menudo tiene un alcance un 30% menor.</p>
-      <p data-en="We always provide detailed, itemised quotes so you know exactly what you are getting. If something is not in the scope, it is because it was agreed not to include it — not because it was forgotten.">Nosotros siempre damos presupuestos detallados y desglosados para que sepas exactamente lo que estás contratando. Si algo no está en el alcance es porque se acordó no incluirlo, no porque se olvidara.</p>
+      <p data-en="We always provide detailed, itemised quotes so you know exactly what you are getting. If something is not in the scope, it is because it was agreed not to include it, not because it was forgotten.">Nosotros siempre damos presupuestos detallados y desglosados para que sepas exactamente lo que estás contratando. Si algo no está en el alcance es porque se acordó no incluirlo, no porque se olvidara.</p>
       <h2 data-en="Frequently asked questions">Preguntas frecuentes</h2>
       <div class="faq-list">
         <details class="faq-item">
@@ -801,10 +820,11 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
     });
     langButtons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
     try { localStorage.setItem(LS_LANG, lang); } catch (e) {}
+    try { document.cookie = LS_LANG + '=' + lang + '; Max-Age=31536000; Path=/; Domain=.puntoreforma.es; SameSite=Lax'; } catch (e) {}
   }
   langButtons.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
   var saved = 'es';
-  try { saved = localStorage.getItem(LS_LANG) || 'es'; } catch (e) {}
+  try { saved = localStorage.getItem(LS_LANG) || (document.cookie.match(/(?:^|; )puntoreforma_lang=([^;]*)/) || [])[1] || 'es'; } catch (e) {}
   setLang(saved);
 
   /* ---------- marquee seamless loop ---------- */
@@ -1087,7 +1107,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
   function readCookie(name){return document.cookie.split(';').map(function(cookie){return cookie.trim()}).filter(Boolean).reduce(function(value,cookie){var eq=cookie.indexOf('=');var key=eq>-1?cookie.slice(0,eq):cookie;if(key===name)return decodeURIComponent(eq>-1?cookie.slice(eq+1):'');return value},null)}
   function writeConsentCookie(choice){var maxAge=CONSENT_DAYS*24*60*60;var secure=window.location.protocol==='https:'?'; Secure':'';document.cookie=CONSENT_KEY+'='+encodeURIComponent(choice)+'; Max-Age='+maxAge+'; Path=/'+cookieDomainAttr()+'; SameSite=Lax'+secure}
   function readConsent(){var cookieChoice=readCookie(CONSENT_KEY);if(cookieChoice)return cookieChoice;if(readCookie(LEGACY_COOKIE_KEY))return 'accept';try{var raw=localStorage.getItem(CONSENT_KEY);if(!raw)return null;var data=JSON.parse(raw);if(!data.expires||data.expires<Date.now()){localStorage.removeItem(CONSENT_KEY);return null}if(data.choice)writeConsentCookie(data.choice);return data.choice||null}catch(e){localStorage.removeItem(CONSENT_KEY);return null}}
-  function saveConsent(choice){var expires=Date.now()+CONSENT_DAYS*24*60*60*1000;writeConsentCookie(choice);try{localStorage.setItem(CONSENT_KEY,JSON.stringify({choice:choice,expires:expires}))}catch(e){}}
+  function saveConsent(choice){/* tell Google in the same page view, not on the next load */try{if(typeof gtag==='function'){var g=choice==='accept'?'granted':'denied';gtag('consent','update',{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g});}}catch(e){}var expires=Date.now()+CONSENT_DAYS*24*60*60*1000;writeConsentCookie(choice);try{localStorage.setItem(CONSENT_KEY,JSON.stringify({choice:choice,expires:expires}))}catch(e){}}
   function applyCopy(banner){var lang=getLang();var t=copy[lang]||copy.es;var title=banner.querySelector('.wb-cookie-title');var link=banner.querySelector('.wb-cookie-link');var reject=banner.querySelector('[data-choice="reject"]');var accept=banner.querySelector('[data-choice="accept"]');if(title)title.textContent=t.title;if(link){link.textContent=t.more;link.href=t.legalUrl}if(reject)reject.textContent=t.reject;if(accept)accept.textContent=t.accept}
   function initBanner(){
     if(readConsent())return;
@@ -1102,5 +1122,6 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
 })();
 </script>
 <!-- END PUNTOREFORMA MINIMAL COOKIE BANNER -->
+  <script src="../../assets/form-context.js"></script>
 </body>
 </html>

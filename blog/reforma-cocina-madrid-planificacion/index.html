@@ -31,11 +31,13 @@
   "image": "https://puntoreforma.es/images/projekt/APARTMENT_K12-AFTER2-KITCHEN.webp",
   "author": {
     "@type": "Organization",
-    "name": "Punto Reforma Madrid"
+    "name": "Punto Reforma Madrid",
+    "alternateName": "Puntoreforma"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Punto Reforma Madrid",
+    "alternateName": "Puntoreforma",
     "logo": {
       "@type": "ImageObject",
       "url": "https://puntoreforma.es/apple-touch-icon.png"
@@ -545,6 +547,23 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Consent Mode v2. Denied until the banner says otherwise, then updated in place.
+  (function(){
+    var granted = false;
+    try {
+      var raw = localStorage.getItem('puntoreforma_cookie_consent_v1');
+      if (raw) { var v = JSON.parse(raw); granted = v && v.choice === 'accept'; }
+    } catch (e) {}
+    gtag('consent', 'default', {
+      ad_storage: granted ? 'granted' : 'denied',
+      ad_user_data: granted ? 'granted' : 'denied',
+      ad_personalization: granted ? 'granted' : 'denied',
+      analytics_storage: granted ? 'granted' : 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+  })();
   gtag('js', new Date());
   gtag('config', 'G-VEM56KDVN3');
 </script>
@@ -687,7 +706,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
       <p data-en="Everything else, partition walls, power sockets, the hob location along the same wall, is generally movable within budget. We tell you in the first visit what is fixed and what is flexible.">Todo lo demás, los tabiques, las tomas de corriente, la posición del fuego dentro de la misma pared, es en general desplazable dentro del presupuesto. En la primera visita te decimos qué es fijo y qué es flexible.</p>
 
       <h2 data-en="Open kitchen or closed: the decision that most affects the flat">Cocina abierta o cerrada: la decisión que más afecta al piso</h2>
-      <p data-en="Opening the kitchen onto the living room changes the feel of the whole flat and works very well in apartments up to 70 square metres where the combined space reads larger. But it also means odours and noise travel more freely, and it requires a powerful and well-positioned extraction hood — and a properly sized extraction duct.">Abrir la cocina al salón cambia la sensación de todo el piso y funciona muy bien en apartamentos de hasta 70 metros cuadrados donde el espacio conjunto resulta más amplio. Pero también significa que los olores y el ruido se mueven con más libertad, y requiere una campana de extracción potente y bien ubicada, con un conducto de ventilación del tamaño correcto.</p>
+      <p data-en="Opening the kitchen onto the living room changes the feel of the whole flat and works very well in apartments up to 70 square metres where the combined space reads larger. But it also means odours and noise travel more freely, and it requires a powerful and well-positioned extraction hood, and a properly sized extraction duct.">Abrir la cocina al salón cambia la sensación de todo el piso y funciona muy bien en apartamentos de hasta 70 metros cuadrados donde el espacio conjunto resulta más amplio. Pero también significa que los olores y el ruido se mueven con más libertad, y requiere una campana de extracción potente y bien ubicada, con un conducto de ventilación del tamaño correcto.</p>
       <p data-en="If the kitchen has an exterior window, keeping it closed keeps smells contained and preserves a clear separation between cooking and living spaces. In older Madrid buildings with traditional floor plans, the closed kitchen often works better because the walls carry structure that you would rather not touch.">Si la cocina tiene ventana al exterior, mantenerla cerrada contiene los olores y preserva la separación entre cocinar y estar. En edificios más antiguos de Madrid con distribuciones tradicionales, la cocina cerrada suele funcionar mejor porque las paredes llevan estructura que conviene no tocar.</p>
 
       <h2 data-en="Materials: fronts, worktop and floor">Materiales: frente, encimera y suelo</h2>
@@ -805,10 +824,11 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
     });
     langButtons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
     try { localStorage.setItem(LS_LANG, lang); } catch (e) {}
+    try { document.cookie = LS_LANG + '=' + lang + '; Max-Age=31536000; Path=/; Domain=.puntoreforma.es; SameSite=Lax'; } catch (e) {}
   }
   langButtons.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
   var saved = 'es';
-  try { saved = localStorage.getItem(LS_LANG) || 'es'; } catch (e) {}
+  try { saved = localStorage.getItem(LS_LANG) || (document.cookie.match(/(?:^|; )puntoreforma_lang=([^;]*)/) || [])[1] || 'es'; } catch (e) {}
   setLang(saved);
 
   /* ---------- marquee seamless loop ---------- */
@@ -1091,7 +1111,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
   function readCookie(name){return document.cookie.split(';').map(function(cookie){return cookie.trim()}).filter(Boolean).reduce(function(value,cookie){var eq=cookie.indexOf('=');var key=eq>-1?cookie.slice(0,eq):cookie;if(key===name)return decodeURIComponent(eq>-1?cookie.slice(eq+1):'');return value},null)}
   function writeConsentCookie(choice){var maxAge=CONSENT_DAYS*24*60*60;var secure=window.location.protocol==='https:'?'; Secure':'';document.cookie=CONSENT_KEY+'='+encodeURIComponent(choice)+'; Max-Age='+maxAge+'; Path=/'+cookieDomainAttr()+'; SameSite=Lax'+secure}
   function readConsent(){var cookieChoice=readCookie(CONSENT_KEY);if(cookieChoice)return cookieChoice;if(readCookie(LEGACY_COOKIE_KEY))return 'accept';try{var raw=localStorage.getItem(CONSENT_KEY);if(!raw)return null;var data=JSON.parse(raw);if(!data.expires||data.expires<Date.now()){localStorage.removeItem(CONSENT_KEY);return null}if(data.choice)writeConsentCookie(data.choice);return data.choice||null}catch(e){localStorage.removeItem(CONSENT_KEY);return null}}
-  function saveConsent(choice){var expires=Date.now()+CONSENT_DAYS*24*60*60*1000;writeConsentCookie(choice);try{localStorage.setItem(CONSENT_KEY,JSON.stringify({choice:choice,expires:expires}))}catch(e){}}
+  function saveConsent(choice){/* tell Google in the same page view, not on the next load */try{if(typeof gtag==='function'){var g=choice==='accept'?'granted':'denied';gtag('consent','update',{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g});}}catch(e){}var expires=Date.now()+CONSENT_DAYS*24*60*60*1000;writeConsentCookie(choice);try{localStorage.setItem(CONSENT_KEY,JSON.stringify({choice:choice,expires:expires}))}catch(e){}}
   function applyCopy(banner){var lang=getLang();var t=copy[lang]||copy.es;var title=banner.querySelector('.wb-cookie-title');var link=banner.querySelector('.wb-cookie-link');var reject=banner.querySelector('[data-choice="reject"]');var accept=banner.querySelector('[data-choice="accept"]');if(title)title.textContent=t.title;if(link){link.textContent=t.more;link.href=t.legalUrl}if(reject)reject.textContent=t.reject;if(accept)accept.textContent=t.accept}
   function initBanner(){
     if(readConsent())return;
@@ -1106,5 +1126,6 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
 })();
 </script>
 <!-- END PUNTOREFORMA MINIMAL COOKIE BANNER -->
+  <script src="../../assets/form-context.js"></script>
 </body>
 </html>

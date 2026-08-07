@@ -31,11 +31,13 @@
   "image": "https://puntoreforma.es/images/projekt/apartment-a75.webp",
   "author": {
     "@type": "Organization",
-    "name": "Punto Reforma Madrid"
+    "name": "Punto Reforma Madrid",
+    "alternateName": "Puntoreforma"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Punto Reforma Madrid",
+    "alternateName": "Puntoreforma",
     "logo": {
       "@type": "ImageObject",
       "url": "https://puntoreforma.es/apple-touch-icon.png"
@@ -545,6 +547,23 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Consent Mode v2. Denied until the banner says otherwise, then updated in place.
+  (function(){
+    var granted = false;
+    try {
+      var raw = localStorage.getItem('puntoreforma_cookie_consent_v1');
+      if (raw) { var v = JSON.parse(raw); granted = v && v.choice === 'accept'; }
+    } catch (e) {}
+    gtag('consent', 'default', {
+      ad_storage: granted ? 'granted' : 'denied',
+      ad_user_data: granted ? 'granted' : 'denied',
+      ad_personalization: granted ? 'granted' : 'denied',
+      analytics_storage: granted ? 'granted' : 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+  })();
   gtag('js', new Date());
   gtag('config', 'G-VEM56KDVN3');
 </script>
@@ -684,15 +703,15 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
 
       <h2 data-en="The most common types of work">Los trabajos más habituales</h2>
       <p data-en="In Madrid flats, the most common custom carpentry jobs we do are: floor-to-ceiling wardrobes integrated into bedroom alcoves, fitted bookshelves for living room alcoves (very common in pre-war Madrid buildings), custom kitchen furniture where standard modules do not fit the space, under-stair storage units, laundry room storage, and home office setups with cable management built in.">En los pisos de Madrid, los trabajos de carpintería a medida más habituales que hacemos son: armarios de suelo a techo integrados en huecos de dormitorios, librerías empotradas para alcobas del salón (muy habituales en edificios de Madrid anteriores a la guerra), mobiliario de cocina a medida cuando los módulos estándar no encajan en el espacio, muebles bajo escalera, almacenaje de zona de lavado y estudios en casa con gestión de cables integrada.</p>
-      <p data-en="Small-scale joinery work — a bespoke headboard, a custom bench, a window seat with storage below — is also something we make. Sometimes a single piece of furniture solves a problem that no standard product addresses.">Los trabajos de ebanistería de menor escala, un cabecero a medida, un banco de entrada, un asiento bajo ventana con almacenaje debajo, también los fabricamos. A veces una sola pieza de mobiliario resuelve un problema que ningún producto estándar aborda.</p>
+      <p data-en="Small-scale joinery work (a bespoke headboard, a custom bench, a window seat with storage below) is also something we make. Sometimes a single piece of furniture solves a problem that no standard product addresses.">Los trabajos de ebanistería de menor escala, un cabecero a medida, un banco de entrada, un asiento bajo ventana con almacenaje debajo, también los fabricamos. A veces una sola pieza de mobiliario resuelve un problema que ningún producto estándar aborda.</p>
 
       <h2 data-en="Materials and finishes">Materiales y acabados</h2>
       <p data-en="The most common board material for custom furniture in Madrid is melamine-faced MDF or chipboard for painted finishes, and natural wood veneer for wood-finish pieces. Solid wood is used for specific applications like visible shelves, door frames, and certain furniture types where the weight and feel of real wood matters. For kitchen fronts and areas exposed to moisture, we recommend lacquered MDF or marine-grade materials.">El material de tablero más habitual para carpintería a medida en Madrid es el MDF o aglomerado con recubrimiento melamínico para acabados pintados y el tablero con chapa de madera natural para piezas con acabado de madera. La madera maciza se usa para aplicaciones específicas como estantes vistos, marcos de puerta y ciertos tipos de mobiliario donde el peso y la sensación de la madera real importa. Para frentes de cocina y zonas expuestas a humedad, recomendamos MDF lacado o materiales de grado marino.</p>
       <p data-en="For finishes, the choice is mainly between factory lacquer (which gives a very smooth, uniform surface that is hard to achieve on site) and site-applied paint (which allows colour matching to the rest of the room). We advise on the best option for each piece.">Para los acabados, la elección es principalmente entre la laca de fábrica (que da una superficie muy lisa y uniforme difícil de conseguir en obra) y la pintura aplicada en obra (que permite igualar el color con el resto de la habitación). Aconsejamos sobre la mejor opción para cada pieza.</p>
 
       <h2 data-en="Lead times and production process">Plazos y proceso de fabricación</h2>
-      <p data-en="The typical lead time from confirmed measurements to delivery and installation for custom carpentry in Madrid is 3 to 5 weeks for standard pieces, and 6 to 8 weeks for more complex or larger projects. If the carpentry is part of a larger renovation, we schedule it so it arrives for installation at the right point in the build sequence — usually after painting, before accessories.">El plazo típico desde la toma de medidas confirmada hasta la entrega e instalación de carpintería a medida en Madrid es de 3 a 5 semanas para piezas estándar, y de 6 a 8 semanas para proyectos más complejos o de mayor tamaño. Si la carpintería forma parte de una reforma más amplia, la programamos para que llegue a la instalación en el momento correcto de la secuencia de obra: normalmente después de la pintura y antes de los accesorios.</p>
-      <p data-en="The process starts with a site measure after the space is in its final form — plastered walls, final floor level. Then we draw up the piece, agree on the final specification, fabricate in the workshop, and install. The installation of a large fitted wardrobe or bookshelf typically takes one to two days.">El proceso empieza con la toma de medidas en obra una vez que el espacio está en su forma final: paredes enlucidas, nivel de suelo definitivo. Luego dibujamos la pieza, acordamos la especificación final, fabricamos en taller e instalamos. La instalación de un armario empotrado grande o una librería lleva normalmente uno o dos días.</p>
+      <p data-en="The typical lead time from confirmed measurements to delivery and installation for custom carpentry in Madrid is 3 to 5 weeks for standard pieces, and 6 to 8 weeks for more complex or larger projects. If the carpentry is part of a larger renovation, we schedule it so it arrives for installation at the right point in the build sequence, usually after painting, before accessories.">El plazo típico desde la toma de medidas confirmada hasta la entrega e instalación de carpintería a medida en Madrid es de 3 a 5 semanas para piezas estándar, y de 6 a 8 semanas para proyectos más complejos o de mayor tamaño. Si la carpintería forma parte de una reforma más amplia, la programamos para que llegue a la instalación en el momento correcto de la secuencia de obra: normalmente después de la pintura y antes de los accesorios.</p>
+      <p data-en="The process starts with a site measure after the space is in its final form, plastered walls, final floor level. Then we draw up the piece, agree on the final specification, fabricate in the workshop, and install. The installation of a large fitted wardrobe or bookshelf typically takes one to two days.">El proceso empieza con la toma de medidas en obra una vez que el espacio está en su forma final: paredes enlucidas, nivel de suelo definitivo. Luego dibujamos la pieza, acordamos la especificación final, fabricamos en taller e instalamos. La instalación de un armario empotrado grande o una librería lleva normalmente uno o dos días.</p>
 
       <h2 data-en="Price: the factors that define it">Precio: los factores que lo definen</h2>
       <p data-en="The main cost drivers in custom carpentry are: the board material and finish, the size and number of pieces, the hardware (hinges, drawer runners, handles), and the complexity of the installation. A simple floor-to-ceiling wardrobe in a standard alcove with painted MDF doors starts from around 900 to 1,500 euros including installation. A fitted library wall with integrated lighting, glass doors, and a solid wood structure can reach 4,000 to 8,000 euros. The range reflects the difference in materials and complexity, not a profit margin variable.">Los principales factores de coste en carpintería a medida son: el material del tablero y el acabado, el tamaño y número de piezas, los herrajes (bisagras, guías de cajón, tiradores) y la complejidad de la instalación. Un armario empotrado sencillo de suelo a techo en un hueco estándar con puertas de MDF pintado empieza desde unos 900 a 1.500 euros incluyendo instalación. Una pared de librería con iluminación integrada, puertas de cristal y estructura de madera maciza puede llegar a 4.000 u 8.000 euros. El rango refleja la diferencia en materiales y complejidad, no una variable de margen.</p>
@@ -804,10 +823,11 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
     });
     langButtons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
     try { localStorage.setItem(LS_LANG, lang); } catch (e) {}
+    try { document.cookie = LS_LANG + '=' + lang + '; Max-Age=31536000; Path=/; Domain=.puntoreforma.es; SameSite=Lax'; } catch (e) {}
   }
   langButtons.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
   var saved = 'es';
-  try { saved = localStorage.getItem(LS_LANG) || 'es'; } catch (e) {}
+  try { saved = localStorage.getItem(LS_LANG) || (document.cookie.match(/(?:^|; )puntoreforma_lang=([^;]*)/) || [])[1] || 'es'; } catch (e) {}
   setLang(saved);
 
   /* ---------- marquee seamless loop ---------- */
@@ -1090,7 +1110,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
   function readCookie(name){return document.cookie.split(';').map(function(cookie){return cookie.trim()}).filter(Boolean).reduce(function(value,cookie){var eq=cookie.indexOf('=');var key=eq>-1?cookie.slice(0,eq):cookie;if(key===name)return decodeURIComponent(eq>-1?cookie.slice(eq+1):'');return value},null)}
   function writeConsentCookie(choice){var maxAge=CONSENT_DAYS*24*60*60;var secure=window.location.protocol==='https:'?'; Secure':'';document.cookie=CONSENT_KEY+'='+encodeURIComponent(choice)+'; Max-Age='+maxAge+'; Path=/'+cookieDomainAttr()+'; SameSite=Lax'+secure}
   function readConsent(){var cookieChoice=readCookie(CONSENT_KEY);if(cookieChoice)return cookieChoice;if(readCookie(LEGACY_COOKIE_KEY))return 'accept';try{var raw=localStorage.getItem(CONSENT_KEY);if(!raw)return null;var data=JSON.parse(raw);if(!data.expires||data.expires<Date.now()){localStorage.removeItem(CONSENT_KEY);return null}if(data.choice)writeConsentCookie(data.choice);return data.choice||null}catch(e){localStorage.removeItem(CONSENT_KEY);return null}}
-  function saveConsent(choice){var expires=Date.now()+CONSENT_DAYS*24*60*60*1000;writeConsentCookie(choice);try{localStorage.setItem(CONSENT_KEY,JSON.stringify({choice:choice,expires:expires}))}catch(e){}}
+  function saveConsent(choice){/* tell Google in the same page view, not on the next load */try{if(typeof gtag==='function'){var g=choice==='accept'?'granted':'denied';gtag('consent','update',{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g});}}catch(e){}var expires=Date.now()+CONSENT_DAYS*24*60*60*1000;writeConsentCookie(choice);try{localStorage.setItem(CONSENT_KEY,JSON.stringify({choice:choice,expires:expires}))}catch(e){}}
   function applyCopy(banner){var lang=getLang();var t=copy[lang]||copy.es;var title=banner.querySelector('.wb-cookie-title');var link=banner.querySelector('.wb-cookie-link');var reject=banner.querySelector('[data-choice="reject"]');var accept=banner.querySelector('[data-choice="accept"]');if(title)title.textContent=t.title;if(link){link.textContent=t.more;link.href=t.legalUrl}if(reject)reject.textContent=t.reject;if(accept)accept.textContent=t.accept}
   function initBanner(){
     if(readConsent())return;
@@ -1105,5 +1125,6 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
 })();
 </script>
 <!-- END PUNTOREFORMA MINIMAL COOKIE BANNER -->
+  <script src="../../assets/form-context.js"></script>
 </body>
 </html>

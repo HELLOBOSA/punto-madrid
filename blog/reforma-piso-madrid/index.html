@@ -31,11 +31,13 @@
   "image": "https://puntoreforma.es/images/projekt/apartment-a75-after.webp",
   "author": {
     "@type": "Organization",
-    "name": "Punto Reforma Madrid"
+    "name": "Punto Reforma Madrid",
+    "alternateName": "Puntoreforma"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Punto Reforma Madrid",
+    "alternateName": "Puntoreforma",
     "logo": {
       "@type": "ImageObject",
       "url": "https://puntoreforma.es/apple-touch-icon.png"
@@ -545,6 +547,23 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Consent Mode v2. Denied until the banner says otherwise, then updated in place.
+  (function(){
+    var granted = false;
+    try {
+      var raw = localStorage.getItem('puntoreforma_cookie_consent_v1');
+      if (raw) { var v = JSON.parse(raw); granted = v && v.choice === 'accept'; }
+    } catch (e) {}
+    gtag('consent', 'default', {
+      ad_storage: granted ? 'granted' : 'denied',
+      ad_user_data: granted ? 'granted' : 'denied',
+      ad_personalization: granted ? 'granted' : 'denied',
+      analytics_storage: granted ? 'granted' : 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+  })();
   gtag('js', new Date());
   gtag('config', 'G-VEM56KDVN3');
 </script>
@@ -687,17 +706,17 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
       <p data-en="The processing time for a minor works licence in Madrid is currently 4 to 8 weeks from a complete application. We prepare and submit the documentation and manage the process.">El tiempo de tramitación de una licencia de obra menor en Madrid está actualmente entre 4 y 8 semanas desde una solicitud completa. Nosotros preparamos y presentamos la documentación y gestionamos el proceso.</p>
 
       <h2 data-en="The building community: agreements and schedules">La comunidad de propietarios: acuerdos y horarios</h2>
-      <p data-en="Before any renovation work starts, you need to notify the building's property community in writing. Most buildings require a minimum of 15 days notice and a copy of the contractor's insurance policy. Work is generally permitted Monday to Friday from 8:00 to 20:00, and Saturday from 9:00 to 14:00 in Madrid — but some buildings have stricter rules. Noise-generating demolition work is usually restricted to morning hours only.">Antes de que empiece cualquier obra hay que notificar a la comunidad de propietarios por escrito. La mayoría de los edificios requieren un mínimo de 15 días de preaviso y una copia del seguro del contratista. Las obras están permitidas generalmente de lunes a viernes de 8:00 a 20:00 y los sábados de 9:00 a 14:00 en Madrid, pero algunos edificios tienen normas más estrictas. Los trabajos de derribo con ruido suelen estar restringidos solo a las horas de la mañana.</p>
+      <p data-en="Before any renovation work starts, you need to notify the building's property community in writing. Most buildings require a minimum of 15 days notice and a copy of the contractor's insurance policy. Work is generally permitted Monday to Friday from 8:00 to 20:00, and Saturday from 9:00 to 14:00 in Madrid, but some buildings have stricter rules. Noise-generating demolition work is usually restricted to morning hours only.">Antes de que empiece cualquier obra hay que notificar a la comunidad de propietarios por escrito. La mayoría de los edificios requieren un mínimo de 15 días de preaviso y una copia del seguro del contratista. Las obras están permitidas generalmente de lunes a viernes de 8:00 a 20:00 y los sábados de 9:00 a 14:00 en Madrid, pero algunos edificios tienen normas más estrictas. Los trabajos de derribo con ruido suelen estar restringidos solo a las horas de la mañana.</p>
       <p data-en="Protecting the lift with padded blankets, covering the entrance floor, and cleaning the common areas at the end of each day are standard practice for us on all building sites.">Proteger el ascensor con mantas acolchadas, cubrir el suelo del portal y limpiar las zonas comunes al final de cada jornada es nuestra práctica estándar en todas las obras.</p>
 
       <h2 data-en="Realistic timelines in Madrid">Plazos reales en Madrid</h2>
-      <p data-en="A cosmetic renovation of a 70 m² flat takes 3 to 4 weeks with a coordinated team. A partial renovation including one wet room takes 5 to 8 weeks. A full renovation of a 70 m² flat takes 10 to 16 weeks from start of work — not counting the permit application time if required. These timelines assume all materials are confirmed before work starts, which is why we do not begin until the material selection is closed.">Una reforma cosmética de un piso de 70 m² lleva de 3 a 4 semanas con un equipo coordinado. Una reforma parcial que incluya un cuarto húmedo lleva de 5 a 8 semanas. Una reforma integral de un piso de 70 m² lleva de 10 a 16 semanas desde el inicio de la obra, sin contar el tiempo de tramitación de licencias si hace falta. Estos plazos suponen que todos los materiales están confirmados antes de empezar, que es por eso por lo que no comenzamos hasta que la selección de materiales está cerrada.</p>
+      <p data-en="A cosmetic renovation of a 70 m² flat takes 3 to 4 weeks with a coordinated team. A partial renovation including one wet room takes 5 to 8 weeks. A full renovation of a 70 m² flat takes 10 to 16 weeks from start of work, not counting the permit application time if required. These timelines assume all materials are confirmed before work starts, which is why we do not begin until the material selection is closed.">Una reforma cosmética de un piso de 70 m² lleva de 3 a 4 semanas con un equipo coordinado. Una reforma parcial que incluya un cuarto húmedo lleva de 5 a 8 semanas. Una reforma integral de un piso de 70 m² lleva de 10 a 16 semanas desde el inicio de la obra, sin contar el tiempo de tramitación de licencias si hace falta. Estos plazos suponen que todos los materiales están confirmados antes de empezar, que es por eso por lo que no comenzamos hasta que la selección de materiales está cerrada.</p>
 
       <h2 data-en="Coordinating the trades: the invisible work">Coordinar los gremios: el trabajo invisible</h2>
       <p data-en="The main reason flat renovations run over time and over budget is poor trade coordination. When the plumber does not know what the electrician needs, or the tiler arrives before the waterproofing is cured, things have to be undone and redone. We sequence the work so each trade works into ready surfaces, and we have a project manager who keeps the programme.">La razón principal por la que las reformas de piso se retrasan y se salen del presupuesto es la mala coordinación de gremios. Cuando el fontanero no sabe lo que necesita el electricista, o el alicatador llega antes de que haya curado la impermeabilización, hay que deshacer y rehacer. Nosotros secuenciamos el trabajo para que cada gremio trabaje sobre superficies preparadas, y tenemos un jefe de obra que mantiene el programa.</p>
 
       <h2 data-en="Total budget: how not to get lost">Presupuesto total: cómo no perderse</h2>
-      <p data-en="For a 70 m² flat in Madrid, rough order-of-magnitude budgets are: cosmetic renovation 15,000 to 25,000 euros; partial renovation with one bathroom and kitchen 35,000 to 60,000 euros; full renovation with layout changes 65,000 to 110,000 euros. These include labour, materials, and waste removal, before IVA. Premium materials, structural changes, and permit costs push them higher. We give you a fixed-price quote for the agreed scope — no surprises mid-build.">Para un piso de 70 m² en Madrid, los presupuestos orientativos son: reforma cosmética de 15.000 a 25.000 euros; reforma parcial con un baño y cocina de 35.000 a 60.000 euros; reforma integral con cambios de distribución de 65.000 a 110.000 euros. Estos incluyen mano de obra, materiales y gestión de residuos, antes de IVA. Los materiales premium, los cambios estructurales y los costes de licencias los suben. Nosotros damos un presupuesto de precio fijo para el alcance acordado. Sin sorpresas a mitad de obra.</p>
+      <p data-en="For a 70 m² flat in Madrid, rough order-of-magnitude budgets are: cosmetic renovation 15,000 to 25,000 euros; partial renovation with one bathroom and kitchen 35,000 to 60,000 euros; full renovation with layout changes 65,000 to 110,000 euros. These include labour, materials, and waste removal, before IVA. Premium materials, structural changes, and permit costs push them higher. We give you a fixed-price quote for the agreed scope, no surprises mid-build.">Para un piso de 70 m² en Madrid, los presupuestos orientativos son: reforma cosmética de 15.000 a 25.000 euros; reforma parcial con un baño y cocina de 35.000 a 60.000 euros; reforma integral con cambios de distribución de 65.000 a 110.000 euros. Estos incluyen mano de obra, materiales y gestión de residuos, antes de IVA. Los materiales premium, los cambios estructurales y los costes de licencias los suben. Nosotros damos un presupuesto de precio fijo para el alcance acordado. Sin sorpresas a mitad de obra.</p>
       <h2 data-en="Frequently asked questions">Preguntas frecuentes</h2>
       <div class="faq-list">
         <details class="faq-item">
@@ -803,10 +822,11 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
     });
     langButtons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
     try { localStorage.setItem(LS_LANG, lang); } catch (e) {}
+    try { document.cookie = LS_LANG + '=' + lang + '; Max-Age=31536000; Path=/; Domain=.puntoreforma.es; SameSite=Lax'; } catch (e) {}
   }
   langButtons.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
   var saved = 'es';
-  try { saved = localStorage.getItem(LS_LANG) || 'es'; } catch (e) {}
+  try { saved = localStorage.getItem(LS_LANG) || (document.cookie.match(/(?:^|; )puntoreforma_lang=([^;]*)/) || [])[1] || 'es'; } catch (e) {}
   setLang(saved);
 
   /* ---------- marquee seamless loop ---------- */
@@ -1089,7 +1109,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
   function readCookie(name){return document.cookie.split(';').map(function(cookie){return cookie.trim()}).filter(Boolean).reduce(function(value,cookie){var eq=cookie.indexOf('=');var key=eq>-1?cookie.slice(0,eq):cookie;if(key===name)return decodeURIComponent(eq>-1?cookie.slice(eq+1):'');return value},null)}
   function writeConsentCookie(choice){var maxAge=CONSENT_DAYS*24*60*60;var secure=window.location.protocol==='https:'?'; Secure':'';document.cookie=CONSENT_KEY+'='+encodeURIComponent(choice)+'; Max-Age='+maxAge+'; Path=/'+cookieDomainAttr()+'; SameSite=Lax'+secure}
   function readConsent(){var cookieChoice=readCookie(CONSENT_KEY);if(cookieChoice)return cookieChoice;if(readCookie(LEGACY_COOKIE_KEY))return 'accept';try{var raw=localStorage.getItem(CONSENT_KEY);if(!raw)return null;var data=JSON.parse(raw);if(!data.expires||data.expires<Date.now()){localStorage.removeItem(CONSENT_KEY);return null}if(data.choice)writeConsentCookie(data.choice);return data.choice||null}catch(e){localStorage.removeItem(CONSENT_KEY);return null}}
-  function saveConsent(choice){var expires=Date.now()+CONSENT_DAYS*24*60*60*1000;writeConsentCookie(choice);try{localStorage.setItem(CONSENT_KEY,JSON.stringify({choice:choice,expires:expires}))}catch(e){}}
+  function saveConsent(choice){/* tell Google in the same page view, not on the next load */try{if(typeof gtag==='function'){var g=choice==='accept'?'granted':'denied';gtag('consent','update',{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g});}}catch(e){}var expires=Date.now()+CONSENT_DAYS*24*60*60*1000;writeConsentCookie(choice);try{localStorage.setItem(CONSENT_KEY,JSON.stringify({choice:choice,expires:expires}))}catch(e){}}
   function applyCopy(banner){var lang=getLang();var t=copy[lang]||copy.es;var title=banner.querySelector('.wb-cookie-title');var link=banner.querySelector('.wb-cookie-link');var reject=banner.querySelector('[data-choice="reject"]');var accept=banner.querySelector('[data-choice="accept"]');if(title)title.textContent=t.title;if(link){link.textContent=t.more;link.href=t.legalUrl}if(reject)reject.textContent=t.reject;if(accept)accept.textContent=t.accept}
   function initBanner(){
     if(readConsent())return;
@@ -1104,5 +1124,6 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
 })();
 </script>
 <!-- END PUNTOREFORMA MINIMAL COOKIE BANNER -->
+  <script src="../../assets/form-context.js"></script>
 </body>
 </html>
