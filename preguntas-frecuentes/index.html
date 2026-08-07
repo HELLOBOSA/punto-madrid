@@ -730,6 +730,9 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
 .legal-exit p{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(28px,4vw,46px);letter-spacing:-.045em;line-height:1;color:var(--ink);margin:0}
 @media(max-width:860px){.legal-shell{grid-template-columns:1fr}.legal-index{position:static}.legal-exit{display:block}.legal-exit .btn{margin-top:22px}}
 
+
+.faq-cta-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.faq-note{margin:26px auto 0;max-width:60ch;font-size:.82rem;line-height:1.6;opacity:.6;text-align:center}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEM56KDVN3"></script>
 <script>
@@ -909,32 +912,18 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
     </details>
   </div>
 
-  <div class="faq-cta">
-    <p data-en="Still have questions about your renovation? Get a free, no-obligation quote.">¿Tienes más preguntas sobre tu reforma? Pide un presupuesto gratis y sin compromiso.</p>
-    <a href="/#contacto" class="btn btn-primary" data-en="Contact">Contacto</a>
+  <div class="faq-cta" id="contacto">
+    <p data-en="Did not find your answer? Write to us and we will point you to the right team.">¿No has encontrado la respuesta? Escríbenos y te ponemos en contacto con el equipo adecuado.</p>
+    <div class="faq-cta-actions"><a href="mailto:info@puntoreforma.es" class="btn btn-primary" data-en="info@puntoreforma.es">info@puntoreforma.es</a><a href="https://wa.me/34662411064" class="btn btn-ghost" data-en="WhatsApp">WhatsApp</a></div>
   </div>
-</section>
-<section class="cities-cta" id="contacto">
-  <div class="wrap">
-    <div class="cities-cta-box">
-      <div>
-        <span class="eyebrow"><span class="tick" aria-hidden="true"></span><span data-en="Need help?">¿Necesitas ayuda?</span></span>
-        <h2 data-en="Still have a question?">¿Te queda alguna duda?</h2>
-        <p data-en="If your question is not answered here, write to us and we will come back to you.">Si tu pregunta no está aquí, escríbenos y te respondemos.</p>
-      </div>
-      <div class="cities-cta-actions">
-        <a class="btn btn-primary" href="mailto:info@puntoreforma.es" data-en="info@puntoreforma.es">info@puntoreforma.es</a>
-        <a class="btn btn-ghost" href="https://wa.me/34662411064" data-en="WhatsApp">WhatsApp</a>
-      </div>
-    </div>
-  </div>
+  <p class="faq-note" data-en="Prices and timings on this page are indicative; fees and processing times are set by the local authority and tax rules by the Agencia Tributaria.">Los precios y plazos de esta página son orientativos; las tasas y los tiempos de tramitación los fija el ayuntamiento y las reglas fiscales la Agencia Tributaria.</p>
 </section>
 </main>
 
 <footer class="footer">
   <div class="footer-word" aria-hidden="true"><svg viewBox="0 0 900 150" role="presentation" focusable="false"><text x="0" y="128" font-size="132" textLength="900" lengthAdjust="spacing">PUNTOREFORMA</text></svg></div>
   <div class="wrap footer-bottom">
-    <span class="footer-links" data-en="<a href=&quot;#top&quot;>Puntoreforma</a> · <a href=&quot;/ciudades/&quot;>Cities</a> · <a href=&quot;/partners/&quot;>Partners</a> · <a href=&quot;/legal/&quot;>Legal notice</a> · <a href=&quot;mailto:info@puntoreforma.es&quot;>info@puntoreforma.es</a>"><a href="#top">Puntoreforma</a> · <a href="/ciudades/">Ciudades</a> · <a href="/partners/">Partners</a> · <a href="/legal/">Aviso legal</a> · <a href="mailto:info@puntoreforma.es">info@puntoreforma.es</a></span>
+    <span class="footer-links" data-en="<a href=&quot;#top&quot;>Puntoreforma</a> · <a href=&quot;/ciudades/&quot;>Cities</a> · <a href=&quot;/preguntas-frecuentes/&quot;>FAQ</a> · <a href=&quot;/partners/&quot;>Partners</a> · <a href=&quot;/legal/&quot;>Legal notice</a> · <a href=&quot;mailto:info@puntoreforma.es&quot;>info@puntoreforma.es</a>"><a href="#top">Puntoreforma</a> · <a href="/ciudades/">Ciudades</a> · <a href="/preguntas-frecuentes/">Preguntas frecuentes</a> · <a href="/partners/">Partners</a> · <a href="/legal/">Aviso legal</a> · <a href="mailto:info@puntoreforma.es">info@puntoreforma.es</a></span>
     <span class="footer-credit" data-en="© 2026 · WEB BY <a href=&quot;https://eolos.es&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>EOLOS DESIGN LAB</a>">© 2026 · WEB BY <a href="https://eolos.es" target="_blank" rel="noopener">EOLOS DESIGN LAB</a></span>
   </div>
 </footer>
